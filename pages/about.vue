@@ -2,10 +2,10 @@
   <div class="mt-16 sm:mt-24 flex flex-col items-center">
     <h1 class="text-4xl">About</h1>
     <p class="mt-8 px-4 text-xl max-w-screen-md text-center">
-      Made with Supabase is made to showcase all the project that uses
-      <span> Supabase </span> as their preferred <span>Database</span>,
-      <span> Authentication </span> or <span> Storage</span>. Most importantly,
-      that Made with Supabase is indeed, made with Supabase too!
+      Made with Inuitive is made to showcase all the project that uses
+      <span> Inuitive </span> as their preferred <span>3D vision </span>,
+      <span> NU4000 Chips </span> or <span> C158 modules</span>.From robotics to VR/AR
+	  <span>	 </span>
     </p>
     <br />
     <br />
@@ -16,35 +16,35 @@
         href="https://v3.nuxtjs.org/"
         rel="noopener"
         class="text-sm rounded-md bg-dark-400 mr-2 mb-2 px-4 py-2"
-        >Vue 3 → Nuxt 3</a
+        >全球前沿的芯片上3D深度感知引擎，极大提升3D深度性能</a
       >
       <a
         target="_blank"
         href="https://vitejs.dev/"
         rel="noopener"
         class="text-sm rounded-md bg-dark-400 mr-2 mb-2 px-4 py-2"
-        >Vite</a
+        >高度集成：集成3D深度、SLAM实时定位建图引擎、及人工智能于一体，单芯片即可实现多颗芯片功能</a
       >
       <a
         target="_blank"
         href="https://windicss.org/"
         rel="noopener"
         class="text-sm rounded-md bg-dark-400 mr-2 mb-2 px-4 py-2"
-        >WindiCSS</a
+        >超低功耗：0.5w即可实现5-6 TOPS算力，轻易满足设备端功耗要求</a
       >
       <a
         target="_blank"
         href="https://supabase.com/"
         rel="noopener"
         class="text-sm rounded-md bg-dark-400 mr-2 mb-2 px-4 py-2"
-        >Supabase</a
+        >实时高精度姿态跟踪</a
       >
       <a
         target="_blank"
         href="https://vercel.com/"
         rel="noopener"
         class="text-sm rounded-md bg-dark-400 mr-2 mb-2 px-4 py-2"
-        >Vercel</a
+        > 3D性能、成本、功耗的优化组合，已与全球3D应用龙头企业合作，大量推广3D视觉双目方案</a
       >
     </div>
 

@@ -1,13 +1,10 @@
 <template>
   <div>
-    <CustomMeta :title="'Supabase Showcase | Made with Supabase'" />
+    <CustomMeta :title="'Inuitive Solution Showcase | Made with Inuitive'" />
 
     <div class="mt-8 flex flex-col items-center">
       <h1 class="text-3xl md:text-4xl text-center">Made with Inuitive</h1>
-	  Built in with SLAM+AI+3D engine 	  
-	  <h2>Inuitive的芯片及模组已在全球范围内被深入应用在智能机器人、XR/3D交互、3D扫描、高端无人机等多个前沿3D视觉应用领域的龙头企业产品中。</h2>
-
-	  
+	  Built in with SLAM+AI+3D engine
     </div>
 
     <Banner></Banner>
@@ -17,9 +14,9 @@
         <HeroSlider :data="hero"></HeroSlider>
 
         <div class="mt-16 sm:mt-24">
-          <h1 class="text-4xl text-center mb-4 sm:mb-8">Testimonial</h1>
+          <h1 class="text-4xl text-center mb-4 sm:mb-8">Tutorials</h1>
           <div class="card-grid">
-            <div v-for="item in testimonial" :key="item.id">
+            <div v-for="item in Tutorials" :key="item.id">
               <Card :item="item"></Card>
             </div>
           </div>
@@ -29,7 +26,7 @@
 
         <div>
           <h1 ref="target" class="text-4xl text-center mb-4 sm:mb-8">
-            Most Viewed “银牛3D机器视觉模组C158”基于银牛以色列子公司Inuitive的NU4000芯片以及模组设计，并针对中国市场进行了调优。
+            C158 Usecases
           </h1>
           <div v-if="latest" class="h-full relative">
             <div class="card-grid">
@@ -59,24 +56,36 @@
 
 <script setup lang="ts">
 const { $supabase } = useNuxtApp()
+
 let itemCount = useState("item-count", () => 0)
 const page = computed(() => (route.query.page ? +route.query.page - 1 : 0))
+
 const route = useRoute()
+
 const [{ data: homeData }, { data: latest }] = await Promise.all([
   useLazyAsyncData("hero testimonial", () => $fetch("/api/project/home")),
-  useLazyAsyncData("latest", async () => {
-    const { data, count } = await $supabase
-      .from("products_view")
-      .select("*", { count: "exact" })
-      .order("views", { ascending: false })
-      .range(page.value * 12, page.value * 12 + 11)
-    itemCount.value = count
-    return data
-  }),
+
+  useLazyAsyncData(
+    "latest",
+    () =>
+      $supabase
+        .from("products_view")
+        .select("*", { count: "exact" })
+        .order("views", { ascending: false })
+        .range(page.value * 12, page.value * 12 + 11),
+    {
+      transform: (a: any) => {
+        itemCount.value = a.count
+        return a.data
+      },
+    }
+  ),
 ])
 const target = ref()
+
 const hero = computed(() => homeData.value?.[0].data)
 const testimonial = computed(() => homeData.value?.[1].data)
+
 const pending = ref(false)
 const fetchLatest = async () => {
   pending.value = true
@@ -90,6 +99,7 @@ const fetchLatest = async () => {
   }
   pending.value = false
 }
+
 watch(
   () => route.query,
   (n) => {
@@ -97,6 +107,7 @@ watch(
   },
   { immediate: true }
 )
+
 definePageMeta({
   pageTransition: {
     name: "fade",

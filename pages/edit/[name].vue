@@ -195,7 +195,7 @@
               name="twitter"
               type="text"
               v-model="form.twitter"
-              placeholder="madewithsupabase"
+              placeholder="madewithInuitive"
             />
           </div>
         </div>

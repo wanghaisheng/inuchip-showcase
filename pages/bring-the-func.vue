@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CustomMeta :title="'Bring the Func(🕺) | Made with Supabase'" />
+    <CustomMeta :title="'Bring the Func(🕺) | Made with Inuitive'" />
     <transition name="fade">
       <main class="py-8">
         <section class="md:py-6 px-4 flex flex-col items-center">

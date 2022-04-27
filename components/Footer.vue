@@ -14,12 +14,12 @@
         space-y-2
       "
     >
-      <p class="text-2xl"># madewithsupabase</p>
-      <h1 class="text-4xl">Collection of projects made with Supabase</h1>
+      <p class="text-2xl"># madewithInuitive</p>
+      <h1 class="text-4xl">Collection of projects made with Inuitive</h1>
       <p class="!mt-8">
-        I made this to showcase the ⚡ Power of Supabase.
+        I made this to showcase the ⚡ Power of Inuitive.
         <br />
-        If your app/project is using Supabase and want to show off to the world,
+        If your app/project is using Inuitive and want to show off to the world,
         <br />
         Feel free to submit your project ya!
         <br />
@@ -37,12 +37,12 @@
       <div class="inline-flex items-center">
         <p>Created by</p>
         <a
-          href="https://www.zernonia.com"
+          href="mailto:edwin_uestc@163.com"
           rel="noopener"
           target="_blank"
           class="ml-2 relative underline underline-offset-2 underline-dark-100 underline-3"
         >
-          Zernonia</a
+          wanghaisheng</a
         >
         <a rel="noopener" href="https://twitter.com/zernonia" target="_blank">
           <i-mdi:twitter class="ml-2"></i-mdi:twitter>

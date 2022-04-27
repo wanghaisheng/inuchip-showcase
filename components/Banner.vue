@@ -43,9 +43,9 @@ onMounted(() => {
       <h2
         class="z-10 md:text-4xl lg:text-5xl hidden lg:block lg:absolute top-1/2 -translate-y-1/2 translate-x-0 lg:opacity-0 transform group-hover:opacity-100 lg:group-hover:translate-x-48 delay-100 transition-all"
       >
-        Bring the Func(🕺)
+        Bring the 3d vision(🕺)
       </h2>
-      <h2 class="z-10 text-3xl mt-2 lg:hidden">Bring the Func(🕺)</h2>
+      <h2 class="z-10 text-3xl mt-2 lg:hidden">Bring the 3d vision(🕺)</h2>
 
       <svg
         class="absolute h-60 md:h-82 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
